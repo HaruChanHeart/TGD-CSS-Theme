@@ -361,6 +361,8 @@ footer span:after {
 
 #article-list > .article-list-row > .item > .list-title > small.favo {
     color: #fa5252;
+    text-shadow: 0 .1rem .25rem #fa5252;
+    animation: heartBeat 2s ease-in-out infinite;
 }
 
 /* Badges */
@@ -577,3 +579,26 @@ img[title="Moderator"] {
     border-color: var(--default-color);
     box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 }
+
+/* Heartbeat from Animate.css */
+@keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    14% {
+      transform: scale(1.3);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.3);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  }
