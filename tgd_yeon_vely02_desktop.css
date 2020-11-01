@@ -263,10 +263,6 @@ footer span:after {
 }
 
 #article-list > .article-list-row > .item {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 0fr 1fr 0fr;
-    align-items: center;
     border-bottom: 1px solid #dbe4ff;
 }
 
@@ -351,7 +347,7 @@ img[title="Moderator"] {
 }
 
 .btn-primary {
-	background-color: #748ffc;
+    background-color: #748ffc;
     border-color: #748ffc;
 }
 
