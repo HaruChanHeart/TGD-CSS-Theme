@@ -1,8 +1,8 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 :root {
-	--default-color: #ff922b;
-	--default-color-hover: #e8590c;
+    --default-color: #ff922b;
+    --default-color-hover: #e8590c;
     --default-color-light: #fff4e6;
 }
 
@@ -47,6 +47,7 @@ header #right-search-form > input[type="text"] {
     border: 1px solid #dbe4ff;
     border-radius: .25rem;
     transition: all .15s ease;
+    outline: none;
 }
 
 header #right-search-form > input[type="text"]::placeholder {
@@ -110,6 +111,11 @@ header #header-bar #header-menu-right {
     padding: 0;
 }
 
+header #header-bar #header-menu-right #userDropdown img.profile-img {
+    margin: 0;
+    border-radius: .25rem;
+}
+
 header #header-bar #header-top-notice a,
 header #header-bar a.dropdown-toggle {
     color: #fff;
@@ -121,7 +127,7 @@ header #header-bar #header-top-notice strong.notice-badge {
     border-radius: .25rem;
     font-weight: 400;
     line-height: 1;
-	margin-right: .75rem;
+    margin-right: .75rem;
 }
 
 /* Footer */
@@ -141,7 +147,7 @@ footer a:hover {
 
 footer span:after {
     display: block;
-	content: '디자인의 저작권은 "하루쨔응"에 있습니다.';
+    content: '디자인의 저작권은 "하루쨔응"에 있습니다.';
     width: auto;
 }
 
@@ -266,6 +272,10 @@ footer span:after {
     border-bottom: 1px solid #dbe4ff;
 }
 
+#article-list > .article-list-row > .item > .list-title > a:visited {
+	color: #343a40 !important;
+}
+
 #article-list > .article-list-row > .item > .list-title > .list-category,
 #article-list > .article-list-row > .item > .list-title > .list-writer {
     border-color: #dbe4ff;
@@ -281,7 +291,7 @@ footer span:after {
 }
 
 #article-list > .article-list-row > .item > .list-title {
-	align-items: center;
+    align-items: center;
     font-size: 14px;
     font-weight: 400 !important;
     line-height: 1;
@@ -298,6 +308,11 @@ footer span:after {
     background-color: var(--default-color);
     line-height: 0;
     border-radius: 50%;
+}
+
+#article-content-wrapper > .header {
+    border: none;
+    background-color: transparent;
 }
 
 /* Badges */
@@ -331,6 +346,76 @@ img[title="Moderator"] {
     height: 100%;
 }
 
+#article-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#article-info h2 {
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: 700;
+    align-self: flex-end;
+}
+
+#article-info .article-profile-img {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    top: initial;
+    right: initial;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#article-info #article-info-writer {
+    grid-column: 1;
+    grid-row: 2;
+	font-size: 14px;
+}
+
+#article-content-wrapper #article-content,
+#article-content-wrapper > .vote-area {
+    border: none;
+}
+
+#article-content-wrapper > .footer {
+    background-color: transparent;
+}
+
+/* Comments */
+#article-reply-area > .header h5,
+#article-reply-area a {
+    color: var(--default-color);
+}
+
+#article-reply-area #reply-real-area .reply,
+#article-reply-area #reply-best-area .reply {
+    box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+    border-radius: .5rem;
+    margin-bottom: 1em;
+    padding: 1rem;
+}
+
+#article-reply-area #reply-real-area .reply > .reply-header,
+#article-reply-area #reply-best-area .reply > .reply-header {
+    background-color: transparent;
+    border: none;
+}
+
+#article-reply-area #reply-real-area .reply > .reply-header > .reply-writer.logged,
+#article-reply-area #reply-best-area .reply > .reply-header > .reply-writer.logged {
+	color: var(--default-color);
+}
+
+#article-reply-area #reply-real-area .reply.active,
+#article-reply-area #reply-best-area .reply.active {
+    background-color: var(--default-color-light);
+}
+
 /* Buttons */
 .btn {
     box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
@@ -338,12 +423,56 @@ img[title="Moderator"] {
 }
 
 .btn.square {
-	border-radius: .25rem;
+    border-radius: .25rem;
 }
 
 .btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+
+.btn-default {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-default:hover {
+    background-color: #f1f3f5;
+    border-color: #f1f3f5;
+}
+
+.btn-outline-danger {
+    color: #fff;
+    background-color: #fa5252;
+    border-color: #fa5252;
+}
+
+.btn-outline-danger:hover {
+    color: #fff;
+    background-color: #c92a2a;
+    border-color: #c92a2a;
+}
+
+.btn-outline-success {
+    color: #fff;
+    background-color: #38d9a9;
+    border-color: #38d9a9;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #0ca678;
+    border: 1px solid #0ca678;
+}
+
+.btn-info {
+    background-color: #4dabf7;
+    border: 1px solid #4dabf7;
+}
+
+.btn-info:hover {
+    background-color: #1c7ed6;
+    border: 1px solid #1c7ed6;
 }
 
 .btn-primary {
@@ -352,7 +481,8 @@ img[title="Moderator"] {
 }
 
 .btn-primary:hover {
-    background-color: #748ffc;
+    background-color: #4263eb;
+    border-color: #4263eb;
 }
 
 #article-list #article-list-menu > .btn.best {
@@ -395,6 +525,23 @@ img[title="Moderator"] {
 }
 
 #boardSearchForm .form-control:focus {
+    border-color: var(--default-color);
+    box-shadow: initial;
+}
+
+/* Article Editor */
+#articleWriteForm .form-control {
+    color: #495057;
+    border: 1px solid #dbe4ff;
+    border-radius: .25rem;
+    transition: all .15s ease;
+}
+
+#articleWriteForm .form-control::placeholder {
+    color: #adb5bd !important;
+}
+
+#articleWriteForm .form-control:focus {
     border-color: var(--default-color);
     box-shadow: initial;
 }
