@@ -1,5 +1,11 @@
 @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
+:root {
+	--default-color: #ff922b;
+	--default-color-hover: #e8590c;
+    --default-color-light: #fff4e6;
+}
+
 /* Logo */
 header a[href="/"] {
     display: block;
@@ -48,13 +54,13 @@ header #right-search-form > input[type="text"]::placeholder {
 }
 
 header #right-search-form > input[type="text"]:focus {
-    border-color: #9775fa;
+    border-color: var(--default-color);
     box-shadow: 0 3px 9px rgba(50,50,9,0), 3px 4px 8px rgba(94,114,228,.1);
 }
 
 header #right-search-form > #right-search-btn {
     color: #fff;
-    background-color: #9775fa;
+    background-color: var(--default-color);
     border-radius: .25rem;
     padding: .35em .5em;
     line-height: 0;
@@ -62,13 +68,13 @@ header #right-search-form > #right-search-btn {
 }
 
 header #right-search-form > #right-search-btn:hover {
-    background-color: #7950f2;
+    background-color: var(--default-color-hover);
     box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 
 /* Header */
 header #header-bar > .row {
-    background-color: #9775fa;
+    background-color: var(--default-color);
 	border: none;
     border-radius: .5rem;
     padding: .5rem 2rem;
@@ -111,7 +117,7 @@ header #header-bar a.dropdown-toggle {
 
 header #header-bar #header-top-notice strong.notice-badge {
     color: #212529;
-    background-color: #f3f0ff;
+    background-color: var(--default-color-light);
     border-radius: .25rem;
     font-weight: 400;
     line-height: 1;
@@ -124,12 +130,12 @@ footer span {
 }
 
 footer a {
-    color: #9775fa;
+    color: #748ffc;
     transition: color .15s ease;
 }
 
 footer a:hover {
-    color: #6741d9;
+    color: #4263eb;
     text-decoration: none;
 }
 
@@ -188,12 +194,12 @@ footer span:after {
 }
 
 #board-info #board-info-bottom a {
-    color: #9775fa;
+    color: var(--default-color);
     transition: color .15s ease;
 }
 
 #board-info #board-info-bottom a:hover {
-    color: #5f3dc4;
+    color: var(--default-color-hover);
 }
 
 /* Menu */
@@ -234,13 +240,13 @@ footer span:after {
 }
 
 #article-list #article-list-category > a {
-    color: #7950f2;
+    color: var(--default-color);
     background-color: #fff;
     transition: background-color .15s ease;
 }
 
 #article-list #article-list-category > a:hover {
-    background-color: #f3f0ff;
+    background-color: var(--default-color-light);
 }
 
 #article-list #article-option-area {
@@ -257,6 +263,10 @@ footer span:after {
 }
 
 #article-list > .article-list-row > .item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0fr 1fr 0fr;
+    align-items: center;
     border-bottom: 1px solid #dbe4ff;
 }
 
@@ -283,13 +293,13 @@ footer span:after {
 
 #article-list > .article-list-row > .item > .list-title > .list-writer.logged > span,
 #article-list > .article-list-row > .item > .list-title > small.comment-count {
-    color: #7950f2;
+    color:  var(--default-color);
     font-weight: 400;
 }
 
 #article-list > .article-list-row > .item > .list-header > span {
     color: #fff;
-    background-color: #7950f2;
+    background-color: var(--default-color);
     line-height: 0;
     border-radius: 50%;
 }
@@ -357,8 +367,8 @@ img[title="Moderator"] {
 
 #boardSearchForm .input-group-btn .btn {
     box-shadow: initial;
-    color: #9775fa;
-    border: 1px solid #9775fa;
+    color: var(--default-color);
+    border: 1px solid var(--default-color);
     border-radius: .25rem 0 0 .25rem;
 }
 
@@ -374,7 +384,7 @@ img[title="Moderator"] {
     transform: initial;
     box-shadow: initial;
     color: #fff;
-    background-color: #9775fa;
+    background-color: var(--default-color);
 }
 
 #boardSearchForm .form-control {
@@ -389,7 +399,7 @@ img[title="Moderator"] {
 }
 
 #boardSearchForm .form-control:focus {
-    border-color: #9775fa;
+    border-color: var(--default-color);
     box-shadow: initial;
 }
 
@@ -412,7 +422,7 @@ img[title="Moderator"] {
 
 .pagination > .active > a,
 .pagination > .active > a:hover {
-    background-color: #9775fa;
-    border-color: #9775fa;
+    background-color: var(--default-color);
+    border-color: var(--default-color);
     box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 }
