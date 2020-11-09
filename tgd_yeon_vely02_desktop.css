@@ -119,6 +119,14 @@ header #header-bar #header-menu-right #userDropdown img.profile-img {
 header #header-bar #header-top-notice a,
 header #header-bar a.dropdown-toggle {
     color: #fff;
+    opacity: .85;
+    transition: opacity .15s ease-in-out;
+}
+
+
+header #header-bar #header-top-notice a:hover,
+header #header-bar a.dropdown-toggle:hover {
+    opacity: 1;
 }
 
 header #header-bar #header-top-notice strong.notice-badge {
@@ -131,17 +139,23 @@ header #header-bar #header-top-notice strong.notice-badge {
 }
 
 /* Footer */
+footer {
+    margin-top: 4em;
+    padding: 2em 0;
+    background: #212529;
+}
+
 footer span {
-    color: #495057;
+    color: #fff;
 }
 
 footer a {
-    color: #748ffc;
+    color: #fff;
     transition: color .15s ease;
 }
 
 footer a:hover {
-    color: #4263eb;
+    color: #adb5bd;
     text-decoration: none;
 }
 
@@ -266,6 +280,10 @@ footer span:after {
 
 #article-list > .article-list-row.notice {
     background-color: transparent;
+}
+
+#article-list > .article-list-row.hot {
+    background-color: var(--default-color-light);
 }
 
 #article-list > .article-list-row > .item {
@@ -422,6 +440,24 @@ img[title="Moderator"] {
     background-color: var(--default-color-light);
 }
 
+/* Animate Dropdown Menu */
+.dropdown-menu,
+.fr-command.fr-btn + .fr-dropdown-menu {
+  display: block;
+  backface-visibility: hidden;
+  transform: scale(0);
+  transform-origin: top;
+  transition: transform .5s cubic-bezier(.15,1.5,0,1), opacity .5s cubic-bezier(.15,1.5,0,1);
+  opacity: 0;
+}
+
+.open .dropdown-menu,
+.fr-command.fr-btn.fr-active + .fr-dropdown-menu,
+#writerContextMenu.dropdown-menu {
+  transform: scale(1);
+  opacity: 1;
+}
+
 /* Buttons */
 .btn {
     box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
@@ -485,7 +521,8 @@ img[title="Moderator"] {
     border: 1px solid #1c7ed6;
 }
 
-.btn-primary {
+.btn-primary,
+.btn.square.btn-primary {
     background-color: #748ffc;
     border-color: #748ffc;
 }
@@ -500,6 +537,8 @@ img[title="Moderator"] {
     background-color: #ffa94d;
     border-color: #ffa94d;
 }
+
+/* Article Search Form */
 
 #boardSearchForm .input-group-btn .btn {
     box-shadow: initial;
