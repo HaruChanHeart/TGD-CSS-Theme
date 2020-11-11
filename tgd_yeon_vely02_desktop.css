@@ -1,4 +1,4 @@
-@import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
 
 :root {
     --default-color: #ff922b;
@@ -21,7 +21,7 @@ header a[href="/"] img {
 /* Background */
 html, body {
     background-color: #fff;
-    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;
+    font-family: 'NanumSquare', sans-serif;
 }
 
 /* Alert */
@@ -202,7 +202,7 @@ footer span:after {
 
 #board-info h1 > a {
     color: #343a40;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 3rem;
 }
 
@@ -214,12 +214,39 @@ footer span:after {
 }
 
 #board-info #board-info-bottom a {
-    color: var(--default-color);
+    color: #343a40;
     transition: color .15s ease;
 }
 
 #board-info #board-info-bottom a:hover {
-    color: var(--default-color-hover);
+    color: #868e96;
+}
+
+/* Board Info Icon Color */
+#score-area .fa-trophy,
+#board-info-bottom .fa-trophy {
+    color: #fab005;
+}
+
+#board-info-bottom .fa-info-circle {
+    color: #228be6;
+
+}
+#board-info-bottom .fa-twitch {
+    color: #7950f2;
+}
+
+#viewers-area .fa-user,
+#board-info-bottom .fa-calendar {
+    color: #fa5252;
+}
+
+#board-info-bottom .fa-photo {
+    color: #40c057;
+}
+
+#board-info-bottom .fa-film {
+    color: #212529;
 }
 
 /* Menu */
@@ -233,19 +260,48 @@ footer span:after {
     background-color: transparent;
 }
 
-#main .menu-wrapper > a,
-#main .menu-wrapper > a > em {
+#main .menu-wrapper > a {
     color: #868e96;
     border: none;
     transition: all .15s ease;
 }
 
-#main .menu-wrapper > a:hover,
-#main .menu-wrapper > a > em:hover {
+#main .menu-wrapper > a:hover {
     color: #212529;
     background-color: transparent;
 }
 
+/* Menu Icon Color */
+#main .menu-wrapper > a[data-shortcut="a"] > em,
+#main .menu-wrapper > a[data-shortcut="p"] > em,
+#main .menu-wrapper > a[data-shortcut="s"] > em {
+    color: #ff6b6b;
+}
+
+#main .menu-wrapper > a[data-shortcut="b"] > em,
+#main .menu-wrapper > a[data-shortcut="u"] > em {
+    color: #ff922b;
+}
+
+#main .menu-wrapper > a[data-shortcut="c"] > em,
+#main .menu-wrapper > a[data-shortcut="q"] > em {
+    color: #51cf66;
+}
+
+#main .menu-wrapper > a[data-shortcut="h"] > em,
+#main .menu-wrapper > a[data-shortcut="t"] > em {
+    color: #339af0;
+}
+
+#main .menu-wrapper > a[href="https://ranking.tgd.kr"] > em,
+#main .menu-wrapper > a[data-shortcut="n"] > em {
+	color: #845ef7;
+}
+
+#main .menu-wrapper > a[href="https://battle.dog"] > em,
+#main .menu-wrapper > a[data-shortcut="e"] > em {
+	color: #f06595;
+}
 
 #main .menu-wrapper .spacer {
     background-color: transparent;
@@ -539,7 +595,6 @@ img[title="Moderator"] {
 }
 
 /* Article Search Form */
-
 #boardSearchForm .input-group-btn .btn {
     box-shadow: initial;
     color: var(--default-color);
@@ -566,6 +621,7 @@ img[title="Moderator"] {
     color: #495057;
     border: 1px solid #dbe4ff;
     border-radius: .25rem;
+    box-shadow: initial;
     transition: all .15s ease;
 }
 
