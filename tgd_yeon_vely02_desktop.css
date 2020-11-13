@@ -42,12 +42,19 @@ html, body {
 }
 
 /* Search */
+header #right-search-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 header #right-search-form > input[type="text"] {
     color: #495057;
     border: 1px solid #dbe4ff;
     border-radius: .25rem;
     transition: all .15s ease;
     outline: none;
+    margin-right: 1rem;
 }
 
 header #right-search-form > input[type="text"]::placeholder {
@@ -513,6 +520,26 @@ img[title="Moderator"] {
   transform: scale(1);
   opacity: 1;
 }
+
+/* Empty Dropdown */
+#favoriteDropdownMenu:empty,
+#latestDropdownMenu:empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+}
+
+#latestDropdownMenu:empty:after {
+  content: "기록이 없어요!";
+  color: #262626;
+}
+
+#favoriteDropdownMenu:empty:after {
+  content: "즐겨찾기가 없어요!";
+  color: #262626;
+}
+
 
 /* Buttons */
 .btn {
