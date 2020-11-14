@@ -28,7 +28,7 @@ html, body {
 .alert-danger {
     color: #fff;
     background-color: #fa5252;
-    border: none;
+    border: 0;
 }
 
 .close {
@@ -50,9 +50,11 @@ header #right-search-form {
 
 header #right-search-form > input[type="text"] {
     color: #495057;
-    border: 1px solid #dbe4ff;
-    border-radius: .25rem;
-    transition: all .15s ease;
+    border: 1px solid rgba(255,146,43,.2);
+    border-top-width: .0625rem;
+    border-bottom-width: calc(.25rem + .0625rem);
+    border-radius: .5rem;
+    transition: border-color .15s ease;
     outline: none;
     margin-right: 1rem;
 }
@@ -62,8 +64,7 @@ header #right-search-form > input[type="text"]::placeholder {
 }
 
 header #right-search-form > input[type="text"]:focus {
-    border-color: var(--default-color);
-    box-shadow: 0 3px 9px rgba(50,50,9,0), 3px 4px 8px rgba(94,114,228,.1);
+    border-color: rgba(247,103,7,.5);
 }
 
 header #right-search-form > #right-search-btn {
@@ -82,8 +83,9 @@ header #right-search-form > #right-search-btn:hover {
 
 /* Header */
 header #header-bar > .row {
-    background-color: var(--default-color);
-    border: none;
+    border: 1px solid rgba(255,146,43,.2);
+    border-top-width: .0625rem;
+    border-bottom-width: calc(.25rem + .0625rem);
     border-radius: .5rem;
     padding: .5rem 2rem;
 }
@@ -114,7 +116,7 @@ header #header-bar > .row,
 
 header #header-bar #header-menu-left,
 header #header-bar #header-menu-right {
-    border: none;
+    border: 0;
     padding: 0;
 }
 
@@ -125,8 +127,8 @@ header #header-bar #header-menu-right #userDropdown img.profile-img {
 
 header #header-bar #header-top-notice a,
 header #header-bar a.dropdown-toggle {
-    color: #fff;
-    opacity: .85;
+    color: #212529;
+    opacity: .75;
     transition: opacity .15s ease-in-out;
 }
 
@@ -137,10 +139,9 @@ header #header-bar a.dropdown-toggle:hover {
 }
 
 header #header-bar #header-top-notice strong.notice-badge {
-    color: #212529;
-    background-color: var(--default-color-light);
+    color: #fff;
+    background-color: var(--default-color);
     border-radius: .25rem;
-    font-weight: 400;
     line-height: 1;
     margin-right: .75rem;
 }
@@ -174,8 +175,10 @@ footer span:after {
 
 /* Frames */
 #main #main-content > div.frame {
-    border: 1px solid #dbe4ff;
-    border-radius: .25rem;
+    border: 1px solid rgba(255,146,43,.2);
+    border-top-width: .0625rem;
+    border-bottom-width: calc(.25rem + .0625rem);
+    border-radius: .5rem;
 }
 
 /* Board Info */
@@ -198,7 +201,7 @@ footer span:after {
 
 #board-info h1 {
     grid-column: 2;
-    border: none;
+    border: 0;
     align-self: flex-end;
 }
 
@@ -258,8 +261,10 @@ footer span:after {
 
 /* Menu */
 #main .menu-wrapper {
-    border: 1px solid #dbe4ff;
-    border-radius: .25rem;
+    border: 1px solid rgba(255,146,43,.2);
+    border-top-width: .0625rem;
+    border-bottom-width: calc(.25rem + .0625rem);
+    border-radius: .5rem;
 }
 
 #main .menu-wrapper > .header {
@@ -269,7 +274,7 @@ footer span:after {
 
 #main .menu-wrapper > a {
     color: #868e96;
-    border: none;
+    border: 0;
     transition: all .15s ease;
 }
 
@@ -388,11 +393,11 @@ footer span:after {
     color: #fff;
     background-color: var(--default-color);
     line-height: 0;
-    border-radius: 50%;
+    border-radius: 1rem;
 }
 
 #article-content-wrapper > .header {
-    border: none;
+    border: 0;
     background-color: transparent;
 }
 
@@ -433,7 +438,7 @@ footer span:after {
 
 #article-content-wrapper #article-content,
 #article-content-wrapper > .vote-area {
-    border: none;
+    border: 0;
 }
 
 #article-content-wrapper > .footer {
@@ -490,7 +495,7 @@ img[title="Moderator"] {
 #article-reply-area #reply-real-area .reply > .reply-header,
 #article-reply-area #reply-best-area .reply > .reply-header {
     background-color: transparent;
-    border: none;
+    border: 0;
 }
 
 #article-reply-area #reply-real-area .reply > .reply-header > .reply-writer.logged,
@@ -501,6 +506,35 @@ img[title="Moderator"] {
 #article-reply-area #reply-real-area .reply.active,
 #article-reply-area #reply-best-area .reply.active {
     background-color: var(--default-color-light);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+	border: 0;
+}
+
+.dropdown-menu li a {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li a:hover {
+    background: #fff4e6;
+}
+
+#latestDropdownMenu li a span.name {
+    max-width: 100%;
+    flex: 1 1 100%;
+}
+
+#latestDropdownMenu li a span.delrow {
+    flex: 1 1 auto;
+    color: #343a40;
+}
+
+#latestDropdownMenu li a span.delrow:hover {
+    color: #ff6b6b;
+    background: transparent;
 }
 
 /* Animate Dropdown Menu */
@@ -540,7 +574,6 @@ img[title="Moderator"] {
   color: #262626;
 }
 
-
 /* Buttons */
 .btn {
     box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
@@ -549,6 +582,7 @@ img[title="Moderator"] {
 
 .btn.square {
     border-radius: .25rem;
+    border: 0;
 }
 
 .btn:hover {
@@ -558,30 +592,25 @@ img[title="Moderator"] {
 
 .btn-default {
     background-color: #fff;
-    border-color: #fff;
 }
 
 .btn-default:hover {
     background-color: #f1f3f5;
-    border-color: #f1f3f5;
 }
 
 .btn-outline-danger {
     color: #fff;
     background-color: #fa5252;
-    border-color: #fa5252;
 }
 
 .btn-outline-danger:hover {
     color: #fff;
     background-color: #c92a2a;
-    border-color: #c92a2a;
 }
 
 .btn-outline-success {
     color: #fff;
     background-color: #38d9a9;
-    border-color: #38d9a9;
 }
 
 .btn-outline-success:hover {
