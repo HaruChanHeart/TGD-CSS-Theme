@@ -522,19 +522,26 @@ img[title="Moderator"] {
     background: #fff4e6;
 }
 
-#latestDropdownMenu li a span.name {
-    max-width: 100%;
-    flex: 1 1 100%;
-}
-
-#latestDropdownMenu li a span.delrow {
+#latestDropdownMenu li a span.delrow,
+#favoriteDropdownMenu li a span.delrow {
     flex: 1 1 auto;
     color: #343a40;
+  	margin-right: .5rem;
+  	transition: color .25s ease;
 }
 
-#latestDropdownMenu li a span.delrow:hover {
+#latestDropdownMenu li a span.delrow:hover,
+#favoriteDropdownMenu li a span.delrow:hover {
     color: #ff6b6b;
     background: transparent;
+}
+
+#latestDropdownMenu li a span.name,
+#favoriteDropdownMenu li a span.name {
+    flex: 1 1 100%;
+    margin: .25rem 0;
+    padding-left: .5rem;
+  	max-width: 100%;
 }
 
 /* Animate Dropdown Menu */
@@ -572,6 +579,10 @@ img[title="Moderator"] {
 #favoriteDropdownMenu:empty:after {
   content: "즐겨찾기가 없어요!";
   color: #262626;
+}
+
+li .label-default {
+  background: #ffa94d;
 }
 
 /* Buttons */
