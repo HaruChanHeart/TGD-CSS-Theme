@@ -205,6 +205,14 @@ footer span:after {
     align-self: flex-end;
 }
 
+#board-info h1 a.badge.badge-live {
+    color: #ff4c51;
+    background-color: #000;
+    border-radius: .25rem;
+    font-size: 1.25rem;
+    animation: blink 1s linear alternate infinite;
+}
+
 #board-info-bottom {
     grid-row: 2;
     grid-column: 2;
@@ -526,8 +534,6 @@ img[title="Moderator"] {
 #favoriteDropdownMenu li a span.delrow {
     flex: 1 1 auto;
     color: #343a40;
-  	margin-right: .5rem;
-  	transition: color .25s ease;
 }
 
 #latestDropdownMenu li a span.delrow:hover,
@@ -541,7 +547,6 @@ img[title="Moderator"] {
     flex: 1 1 100%;
     margin: .25rem 0;
     padding-left: .5rem;
-  	max-width: 100%;
 }
 
 /* Animate Dropdown Menu */
@@ -579,10 +584,6 @@ img[title="Moderator"] {
 #favoriteDropdownMenu:empty:after {
   content: "즐겨찾기가 없어요!";
   color: #262626;
-}
-
-li .label-default {
-  background: #ffa94d;
 }
 
 /* Buttons */
@@ -763,4 +764,14 @@ li .label-default {
     70% {
       transform: scale(1);
     }
-  }
+}
+
+/* Blink for Live Badge */
+@keyframes blink {
+    0% {
+        color:rgba(255,76,81,.5);
+    }
+    100% {
+        color: #ff4c51;
+    }
+}
