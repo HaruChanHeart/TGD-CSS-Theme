@@ -1,3 +1,9 @@
+/*
+* 냉정과 열정 사이 스킨
+* (C)2020 냉혈적인 하루 제작
+* 무단 사용 및 2차 수정 금지이에요!
+*/
+
 /* NEXON Lv1 Gothic */
 @font-face {
   font-family: 'NEXON Lv1 Gothic';
@@ -596,6 +602,12 @@ font[color="#cccccc"] {
   margin: 0;
 }
 
+/* Gallary List */
+#article-list .article-list-table-gallery .article-list-row-gallery .item {
+  transition: .15s background ease;
+  border-radius: .25rem;
+}
+
 /* Article, Comment Active */
 #article-list .article-list-row.active,
 #article-reply-area #reply-real-area .reply.active,
@@ -1003,6 +1015,7 @@ header #right-search-form > input[type="text"]::placeholder {
 header #right-search-form > input[type="text"]:focus {
   border-color: #ff8787;
   box-shadow: 0 0 1rem rgba(255,168,168,.5);
+  outline: 0;
 }
 
 /* Article Search Form */
@@ -1217,9 +1230,9 @@ header #right-search-form > input[type="text"]:focus {
 /* Live Badge Metallic Animation */
 @keyframes metallic {
   0%, 20% {
-  	transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   40%, 100% {
-  	transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
