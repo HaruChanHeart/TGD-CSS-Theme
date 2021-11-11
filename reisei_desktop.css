@@ -1,6 +1,6 @@
 /*
 * 냉정과 열정 사이 스킨
-* (C)2020 냉혈적인 하루 제작
+* (C)2021 냉혈적인 하루 제작
 * 무단 사용 및 2차 수정 금지이에요!
 */
 
@@ -29,14 +29,14 @@
 /* Logo */
 header a[href="/"] {
   display: block;
-  background: url(https://raw.githubusercontent.com/HaruChanHeart/TGD-CSS-Theme/master/tgd_haruchanheart.png) no-repeat 50%/100%;
+  background: url("https://raw.githubusercontent.com/HaruChanHeart/TGD-CSS-Theme/main/Reiketsu_Haru_Logo.svg") no-repeat 50%/100%;
   width: 150px;
   height: 50px;
   transition: filter .2s ease-in-out;
 }
 
 header a[href="/"]:hover {
-  filter: brightness(2) drop-shadow(0 0 .3rem rgba(255,107,107,1));
+  filter: brightness(3);
 }
 
 header a[href="/"] img {
@@ -49,9 +49,15 @@ html, body {
   font-family: 'NEXON Lv1 Gothic', sans-serif;
 }
 
+/* Code */
+code {
+  color: #f06595;
+  background: #fff0f6;
+}
+
 /* Link */
 a {
-	color: #ff8787;
+  color: #ff8787;
   transition: color .15s ease-in-out;
 }
 
@@ -408,7 +414,6 @@ footer span:after {
 
 #article-list .article-list-row .item .list-header,
 #article-list .article-list-row .item .list-checkbox,
-#article-list .article-list-row .item .list-header,
 #article-list .article-list-row .item .list-category,
 #article-list .article-list-row .item .list-title,
 #article-list .article-list-row .item .list-blocked,
@@ -419,8 +424,6 @@ footer span:after {
 
 #article-list .article-list-row:hover .item .list-header,
 #article-list .article-list-row:hover .item .list-checkbox,
-#article-list .article-list-row:hover .item .list-header,
-#article-list .article-list-row:hover .item .list-category,
 #article-list .article-list-row:hover .item .list-title,
 #article-list .article-list-row:hover .item .list-blocked,
 #article-list .article-list-row:hover .item .list-time {
@@ -1017,6 +1020,7 @@ header #right-search-form > input[type="text"]:focus {
   box-shadow: 0 0 1rem rgba(255,168,168,.5);
   outline: 0;
 }
+
 
 /* Article Search Form */
 #boardSearchForm .input-group-btn .btn {
