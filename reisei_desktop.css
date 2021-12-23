@@ -363,51 +363,51 @@ footer span:after {
   z-index: 1;
 }
 
-#article-list #article-list-category a:before,
-#article-list #article-list-category.can-float a:before  {
+#article-list #article-list-category.can-float a:before {
 	content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0%;
+  height: .2rem;
   background: #ff8787;
   z-index: -1;
   transition: width .25s ease;
 }
 
-#article-list #article-list-category a:before {
-  height: .2rem;
-}
-
-#article-list #article-list-category a:hover:before,
-#article-list #article-list-category.can-float a:hover:before,
-#article-list #article-list-category.can-float a.active:before {
+#article-list #article-list-category.can-float a:hover:before {
   width: 100%;
 }
 
 /* Article Menu Float */
-#article-list #article-list-category.can-float {
-  border: 0;
-  box-shadow: 0 1rem 2rem rgba(255,168,168,.25);
-}
+@media (min-width: 1400px) {
+  #article-list #article-list-category.can-float {
+    border: 0;
+    box-shadow: 0 1rem 2rem rgba(255,168,168,.25);
+  }
+  
+  #article-list #article-list-category.can-float a {
+    border: 0;
+    color: #ff8787;
+  }
+  
+  #article-list #article-list-category.can-float a.active {
+    color: #fff;
+    background: #ff8787;
+  }
+  
+  #article-list #article-list-category.can-float a:hover {
+    color: #fff;
+    background: initial;
+  }
+  
+  #article-list #article-list-category.can-float a:before {
+    height: 100%;
+  }
 
-#article-list #article-list-category.can-float a {
-  border: 0;
-  color: #ff8787;
-}
-
-#article-list #article-list-category.can-float a.active {
-  color: #fff;
-  background: #ff8787;
-}
-
-#article-list #article-list-category.can-float a:hover {
-  color: #fff;
-  background: initial;
-}
-
-#article-list #article-list-category.can-float a:before {
-  height: 100%;
+  #article-list #article-list-category.can-float a.active:before {
+    width: 100%;
+  }
 }
 
 /* Toggle Notice Button */
