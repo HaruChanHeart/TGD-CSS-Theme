@@ -35,8 +35,17 @@ header a[href="/"] {
   transition: filter .2s ease-in-out;
 }
 
+/* Dark Mode Logo */
+html.darkmode header a[href="/"] {
+  background: url("https://raw.githubusercontent.com/HaruChanHeart/TGD-CSS-Theme/main/Reiketsu_Haru_Logo_White.svg") no-repeat 50%/100%;
+}
+
 header a[href="/"]:hover {
   filter: brightness(3);
+}
+
+html.darkmode header a[href="/"]:hover {
+  filter: brightness(.8);
 }
 
 header a[href="/"] img {
@@ -108,7 +117,8 @@ header #header-bar #header-top-notice {
   padding: initial;
 }
 
-header #header-bar #header-top-notice strong.notice-badge {
+header #header-bar #header-top-notice strong.notice-badge,
+html.darkmode header #header-bar #header-top-notice strong.notice-badge {
   color: #fff;
   background: #ff6b6b;
   border-radius: 10rem;
@@ -151,12 +161,14 @@ footer {
 }
 
 footer span,
-footer span a {
+footer a,
+html.darkmode footer a {
   color: #fff;
   transition: color .15s ease;
 }
 
-footer span a:hover {
+footer a:hover,
+html.darkmode footer a:hover {
   color: #ced4da;
   text-decoration: none;
 }
@@ -213,7 +225,7 @@ footer span:after {
 }
 
 #main .menu-wrapper a:last-child:after {
-  border-radius: 0 0.25rem .25rem ;
+  border-radius: 0 0 .25rem .25rem ;
 }
 
 #main .menu-wrapper a:hover:after,
@@ -485,11 +497,13 @@ footer span:after {
   display: none;
 }
 
-#article-list .article-list-row .item .list-header span {
+#article-list .article-list-row .item .list-header span,
+html.darkmode #article-list .article-list-row .item .list-header span {
   background: #ff6b6b;
 }
 
-#article-list  .article-list-row .item .list-title .list-writer.logged span {
+#article-list .article-list-row .item .list-title .list-writer.logged span,
+html.darkmode #article-list .article-list-row .item .list-title .list-writer.logged span {
   color: #ff6b6b;
 }
 
@@ -603,7 +617,9 @@ span.a-badge i.fa.fa-info-circle {
 }
 
 #article-reply-area #reply-real-area .reply .reply-header .reply-writer.logged,
-#article-reply-area #reply-best-area .reply .reply-header .reply-writer.logged {
+#article-reply-area #reply-best-area .reply .reply-header .reply-writer.logged,
+html.darkmode #article-reply-area #reply-real-area .reply .reply-header .reply-writer.logged,
+html.darkmode #article-reply-area #reply-best-area .reply .reply-header .reply-writer.logged {
   color: #ff6b6b;
 }
 
@@ -909,14 +925,14 @@ div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default:hov
 
 #latestDropdownMenu li a span.delrow,
 #favoriteDropdownMenu li a span.delrow {
-  color: #868e96;
+  color: #868e96 !important;
   transition: color .15s ease-in-out;
 }
 
 #latestDropdownMenu li a span.delrow:hover,
 #favoriteDropdownMenu li a span.delrow:hover {
-  color: #ff8787;
-  background-color: transparent;
+  color: #ff8787 !important;
+  background-color: transparent !important;
 }
 
 #favoriteDropdownMenu:empty,
@@ -1039,7 +1055,8 @@ li:nth-child(9n) .label-default {
   align-items: center;
 }
 
-header #right-search-form > #right-search-btn {
+header #right-search-form > #right-search-btn,
+html.darkmode header #right-search-form > #right-search-btn {
   color: #fff;
   background: linear-gradient(90deg, #ff6b6b, #f06595);
   box-shadow: 0 .5rem 1rem rgba(255,168,168,.75);
@@ -1068,10 +1085,9 @@ header #right-search-form > input[type="text"]::placeholder {
 
 header #right-search-form > input[type="text"]:focus {
   border-color: #ff8787;
-  box-shadow: 0 0 1rem rgba(255,168,168,.5);
+  box-shadow: 0 0 0 .4rem rgba(255,168,168,.5);
   outline: 0;
 }
-
 
 /* Article Search Form */
 #boardSearchForm .input-group-btn .btn {
@@ -1098,7 +1114,7 @@ header #right-search-form > input[type="text"]:focus {
 
 #boardSearchForm input:focus {
   border-color: #ff8787;
-  box-shadow: 0 0 1rem rgba(255,168,168,.5);
+  box-shadow: 0 0 0 .3rem rgba(255,168,168,.5);
 }
 
 /* Pagination */
@@ -1244,6 +1260,154 @@ header #right-search-form > input[type="text"]:focus {
 }
 
 /* Dark Mode Patch */
+html.darkmode code {
+  background: #401d29;
+}
+
+html.darkmode,
+html.darkmode body {
+  background: #212529;
+}
+
+html.darkmode footer {
+  background: #343a40;
+}
+
+html.darkmode footer a,
+html.darkmode #board-info #board-info-bottom a,
+html.darkmode #article-comment a {
+  color: #fff;
+}
+
+html.darkmode #board-info #board-info-bottom a:hover {
+  color: #dee2e6;
+}
+
+html.darkmode .dropdown-menu,
+html.darkmode header #header-bar .row,
+html.darkmode .frame {
+  border: 0;
+  background: #343a40 !important;
+  box-shadow: 0 1rem 2rem rgba(33,37,41,.25);
+}
+
+html.darkmode .dropdown-menu li a:focus,
+html.darkmode .dropdown-menu li a:hover {
+  background: #495057;
+}
+
+html.darkmode #main .menu-wrapper,
+html.darkmode #main .menu-wrapper a,
+html.darkmode #main .menu-wrapper #fav-shortcut-area a,
+html.darkmode #article-list #article-list-category,
+html.darkmode #article-list #article-list-category a {
+  background: #343a40;
+  border: 0;
+}
+
+html.darkmode #main .menu-wrapper,
+html.darkmode #article-list #article-list-category {
+  box-shadow: 0 1rem 2rem rgba(33,37,41,.25);
+}
+
+html.darkmode #main .menu-wrapper .spacer {
+  height: 0;
+}
+
+html.darkmode #main .menu-wrapper .header {
+  background: #343a40;
+  border-radius: .5rem .5rem 0 0;
+}
+
+html.darkmode #main #main-content div.frame {
+  border: 0 !important;
+  box-shadow: 0 1rem 2rem rgba(33,37,41,.25);
+}
+
+html.darkmode header #header-bar #header-menu-left,
+html.darkmode header #header-bar #header-menu-right,
+html.darkmode #board-info h1,
+html.darkmode #article-content-wrapper .header,
+html.darkmode #article-content-wrapper .footer,
+html.darkmode #article-content-wrapper #article-content {
+  border: 0;
+}
+
+html.darkmode #main .menu-wrapper a em,
+html.darkmode #main .menu-wrapper #fav-shortcut-area a em,
+html.darkmode #main .menu-wrapper #fav-shortcut-area a em i.fa.fa-star,
+html.darkmode .input-group-btn i.fa-search,
+html.darkmode #article-list .article-list-row .item .list-time,
+html.darkmode #favoriteDropdownMenu:empty:after {
+	color: #fff;
+}
+
+html.darkmode #main .menu-wrapper a:hover,
+html.darkmode #main .menu-wrapper #fav-shortcut-area a:hover,
+html.darkmode #article-content-wrapper .header,
+html.darkmode #article-content-wrapper .footer {
+	background: initial;
+}
+
+html.darkmode #article-list .article-list-row:hover {
+  background: #495057 !important;
+  box-shadow: 0 .5rem 1rem rgba(33,37,41,1);
+}
+
+html.darkmode #article-list .article-list-row,
+html.darkmode #article-list .article-list-row .item .list-time,
+html.darkmode #article-list .article-list-row .item .list-header,
+html.darkmode #article-content-wrapper .vote-area {
+  border-left: 0;
+  border-right: 0;
+}
+
+html.darkmode #article-list .article-list-row:hover .item .list-checkbox,
+html.darkmode #article-list .article-list-row:hover .item .list-title,
+html.darkmode #article-list .article-list-row:hover .item .list-time,
+html.darkmode #article-list .article-list-row:hover .item .list-header {
+  border: 0;
+}
+
+html.darkmode #article-list .article-list-row .item .list-checkbox,
+html.darkmode #article-list .article-list-row .item .list-header,
+html.darkmode #article-list .article-list-row .item .list-category,
+html.darkmode #article-list .article-list-row .item .list-title,
+html.darkmode #article-list .article-list-row .item .list-blocked,
+html.darkmode #article-list .article-list-row .item .list-time,
+html.darkmode #article-list .article-list-row .item .list-title .list-category,
+html.darkmode #article-list .article-list-row .item .list-title .list-writer {
+	border-color: #495057;
+}
+
+html.darkmode #article-content p,
+html.darkmode #article-content span {
+  background: initial !important;
+}
+
+html.darkmode header #right-search-form input[type="text"] {
+  border: .0625rem solid #495057;
+}
+
+html.darkmode header #right-search-form input[type="text"]:focus {
+  box-shadow: 0 0 0 .4rem rgba(165,216,255,.5);
+}
+
+html.darkmode #boardSearchForm input:focus {
+  box-shadow: 0 0 0 .3rem rgba(165,216,255,.5);
+}
+
+html.darkmode .btn.cog:hover {
+  background: #495057;
+}
+
+html.darkmode .favo {
+  text-shadow: 0 0 .25rem #ff6b6b;
+}
+
+html.darkmode #board-info-bottom .fa-film {
+  color: #748ffc;
+}
 
 /* Rotate Animation */
 @keyframes rotate {
