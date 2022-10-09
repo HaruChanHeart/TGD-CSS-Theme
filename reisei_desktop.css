@@ -1,6 +1,6 @@
 /*
 * 냉정과 열정 사이 스킨
-* (C)2021 냉혈적인 하루 제작
+* (C)2021-2022 냉혈적인 하루 제작
 * 무단 사용 및 2차 수정 금지이에요!
 */
 
@@ -117,8 +117,7 @@ header #header-bar #header-top-notice {
   padding: initial;
 }
 
-header #header-bar #header-top-notice strong.notice-badge,
-html.darkmode header #header-bar #header-top-notice strong.notice-badge {
+header #header-bar #header-top-notice strong.notice-badge {
   color: #fff;
   background: #ff6b6b;
   border-radius: 10rem;
@@ -237,7 +236,8 @@ footer span:after {
   color: currentColor;
 }
 
-#main .menu-wrapper .spacer {
+#main .menu-wrapper .spacer,
+html.darkmode #main .menu-wrapper .spacer {
   background: transparent;
   height: .5em;
 }
@@ -497,8 +497,7 @@ footer span:after {
   display: none;
 }
 
-#article-list .article-list-row .item .list-header span,
-html.darkmode #article-list .article-list-row .item .list-header span {
+#article-list .article-list-row .item .list-header span {
   background: #ff6b6b;
 }
 
@@ -783,7 +782,7 @@ i.fa.fa-lock {
   border-radius: 10rem;
 }
 
-.btn.cog {
+.btn.cog, {
   filter: initial;
 	background: #fff;
   transition: background .15s ease;
@@ -802,6 +801,8 @@ i.fa.fa-lock {
 
 #addPollBtn,
 #addPollBtn:hover,
+.btn-info,
+.btn-info:hover,
 .btn-outline-primary,
 .btn-outline-primary:hover {
   color: #fff;
@@ -845,8 +846,11 @@ i.fa.fa-lock {
 }
 
 #image-upload-btn,
+#addEmoteBtn,
 div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default,
-#article-content-wrapper .footer .btn-default {
+#article-content-wrapper .footer .btn-default,
+#articleWriteForm a.btn,
+.modal-footer .btn-default {
   color: #fff;
   background: initial;
   background-color: #343a40;
@@ -854,8 +858,11 @@ div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default,
 }
 
 #image-upload-btn:hover,
+#addEmoteBtn:hover,
 div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default:hover,
-#article-content-wrapper .footer .btn-default:hover {
+#article-content-wrapper .footer .btn-default:hover,
+#articleWriteForm a.btn:hover,
+.modal-footer .btn-default:hover {
   filter: initial;
   background-color: #868e96;
 }
@@ -900,7 +907,8 @@ div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default:hov
   background: #edf2ff;
 }
 
-.dropdown-menu li a {
+.dropdown-menu li a,
+html.darkmode .dropdown-menu li a {
   transition: background .15s ease-in-out;
 }
 
@@ -955,6 +963,7 @@ div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default:hov
 
 /* Animate Dropdown Menu */
 .dropdown-menu,
+.dropdown-menu.colorpicker-hidden,
 .fr-command.fr-btn + .fr-dropdown-menu {
   display: block;
   backface-visibility: hidden;
@@ -965,6 +974,7 @@ div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default:hov
 }
 
 .open .dropdown-menu,
+.dropdown-menu.colorpicker-visible,
 .fr-command.fr-btn.fr-active + .fr-dropdown-menu,
 #writerContextMenu.dropdown-menu {
   transform: perspective(2500px) rotateY(0);
@@ -1045,7 +1055,15 @@ li:nth-child(9n) .label-default {
 #articleWriteForm .form-control:focus,
 #commentWriteInfoForm .form-control:focus {
   border-color: #ff8787;
-  box-shadow: 0 0 1rem rgba(255,168,168,.5);
+  box-shadow: 0 0 0 .4rem rgba(255,168,168,.5);
+}
+
+#title_color .form-control {
+  border-radius: 10rem 0 0 10rem;
+}
+
+#title_color .input-group-addon {
+  border-left: 0 !important;
 }
 
 /* Header Search Form */
@@ -1055,8 +1073,7 @@ li:nth-child(9n) .label-default {
   align-items: center;
 }
 
-header #right-search-form > #right-search-btn,
-html.darkmode header #right-search-form > #right-search-btn {
+header #right-search-form #right-search-btn {
   color: #fff;
   background: linear-gradient(90deg, #ff6b6b, #f06595);
   box-shadow: 0 .5rem 1rem rgba(255,168,168,.75);
@@ -1067,11 +1084,11 @@ html.darkmode header #right-search-form > #right-search-btn {
   transition: filter .15s ease;
 }
 
-header #right-search-form > #right-search-btn:hover {
+header #right-search-form #right-search-btn:hover {
 	filter: brightness(1.1);
 }
 
-header #right-search-form > input[type="text"] {
+header #right-search-form input[type="text"] {
   border: 1px solid #adb5bd;
   border-radius: 10rem;
   padding: .5em .75em;
@@ -1079,11 +1096,11 @@ header #right-search-form > input[type="text"] {
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-header #right-search-form > input[type="text"]::placeholder {
+header #right-search-form input[type="text"]::placeholder {
   color: #868e96 !important;
 }
 
-header #right-search-form > input[type="text"]:focus {
+header #right-search-form input[type="text"]:focus {
   border-color: #ff8787;
   box-shadow: 0 0 0 .4rem rgba(255,168,168,.5);
   outline: 0;
@@ -1259,6 +1276,11 @@ header #right-search-form > input[type="text"]:focus {
   padding-left: 0.2em;
 }
 
+/* Fix Table Vertical Align */
+.table tfoot tr td {
+  vertical-align: middle;
+}
+
 /* Dark Mode Patch */
 html.darkmode code {
   background: #401d29;
@@ -1266,34 +1288,66 @@ html.darkmode code {
 
 html.darkmode,
 html.darkmode body {
-  background: #212529;
+  background: #0f172a;
 }
 
 html.darkmode footer {
-  background: #343a40;
+  background: #1e293b;
 }
 
 html.darkmode footer a,
 html.darkmode #board-info #board-info-bottom a,
-html.darkmode #article-comment a {
+html.darkmode #article-comment a,
+html.darkmode .pagination .active a:hover,
+html.darkmode #article-list #article-list-menu .btn.write:hover {
   color: #fff;
 }
 
+html.darkmode #article-list .article-list-row .item .list-title small.comment-count,
+html.darkmode #article-reply-area #reply-real-area .reply .reply-header .reply-menu a,
+html.darkmode #article-reply-area #reply-best-area .reply .reply-header .reply-menu a {
+  color: #f43f5e;
+}
+
+html.darkmode #article-reply-area .header h5,
 html.darkmode #board-info #board-info-bottom a:hover {
-  color: #dee2e6;
+  color: #cbd5e1;
+}
+
+html.darkmode a {
+  color: #7dd3fc;
+  transition: color .2s ease-in-out;
+}
+
+html.darkmode a:hover {
+  color: #60a5fa
 }
 
 html.darkmode .dropdown-menu,
 html.darkmode header #header-bar .row,
 html.darkmode .frame {
   border: 0;
-  background: #343a40 !important;
-  box-shadow: 0 1rem 2rem rgba(33,37,41,.25);
+  background: #1e293b !important;
+  box-shadow: 0 1rem 2rem #111827;
+}
+
+html.darkmode #article-list #article-list-category.can-float a::before,
+html.darkmode #article-list #article-list-category #board-home-link-btn,
+html.darkmode #article-list .article-list-row .item .list-header span,
+html.darkmode header #header-bar #header-top-notice strong.notice-badge {
+  background: #f43f5e;
+}
+
+html.darkmode header #right-search-form #right-search-btn {
+  color: #fff;
+  background: linear-gradient(90deg, #64748b, #475569);
+  box-shadow: 0 .5rem 1rem #111827;
 }
 
 html.darkmode .dropdown-menu li a:focus,
-html.darkmode .dropdown-menu li a:hover {
-  background: #495057;
+html.darkmode .dropdown-menu li a:hover,
+html.darkmode #article-neighbor-list div:hover {
+  background: #334155;
 }
 
 html.darkmode #main .menu-wrapper,
@@ -1301,27 +1355,45 @@ html.darkmode #main .menu-wrapper a,
 html.darkmode #main .menu-wrapper #fav-shortcut-area a,
 html.darkmode #article-list #article-list-category,
 html.darkmode #article-list #article-list-category a {
-  background: #343a40;
+  background: #1e293b;
+  border: 0;
+}
+
+html.darkmode .pagination li a,
+html.darkmode .pagination li span {
+  background: #1e293b;
+  border-color: #334155;
+  transition: all .2s ease-in-out;
+}
+
+html.darkmode .pagination li a:hover,
+html.darkmode .pagination li span:hover {
+  color: #94a3b8;
+  background: #475569;
+}
+
+html.darkmode .pagination .active a,
+html.darkmode .pagination .active a:hover,
+html.darkmode .pagination .active span:focus {
+  background: linear-gradient(90deg, #8b5cf6, #818cf8);
   border: 0;
 }
 
 html.darkmode #main .menu-wrapper,
 html.darkmode #article-list #article-list-category {
-  box-shadow: 0 1rem 2rem rgba(33,37,41,.25);
-}
-
-html.darkmode #main .menu-wrapper .spacer {
-  height: 0;
+  box-shadow: 0 1rem 2rem #111827;
 }
 
 html.darkmode #main .menu-wrapper .header {
-  background: #343a40;
+  background: #334155;
   border-radius: .5rem .5rem 0 0;
 }
 
-html.darkmode #main #main-content div.frame {
+html.darkmode #main #main-content div.frame,
+html.darkmode #article-reply-area #reply-real-area .reply,
+html.darkmode #article-reply-area #reply-best-area .reply {
   border: 0 !important;
-  box-shadow: 0 1rem 2rem rgba(33,37,41,.25);
+  box-shadow: 0 1rem 2rem #111827;
 }
 
 html.darkmode header #header-bar #header-menu-left,
@@ -1329,7 +1401,13 @@ html.darkmode header #header-bar #header-menu-right,
 html.darkmode #board-info h1,
 html.darkmode #article-content-wrapper .header,
 html.darkmode #article-content-wrapper .footer,
-html.darkmode #article-content-wrapper #article-content {
+html.darkmode #article-content-wrapper #article-content,
+html.darkmode #article-list #article-list-category.can-float a,
+html.darkmode #article-reply-area #reply-real-area .reply,
+html.darkmode #article-reply-area #reply-best-area .reply,
+html.darkmode #article-reply-area #reply-real-area .reply .reply-header,
+html.darkmode #article-reply-area #reply-best-area .reply .reply-header,
+html.darkmode .input-group .btn.square {
   border: 0;
 }
 
@@ -1338,20 +1416,39 @@ html.darkmode #main .menu-wrapper #fav-shortcut-area a em,
 html.darkmode #main .menu-wrapper #fav-shortcut-area a em i.fa.fa-star,
 html.darkmode .input-group-btn i.fa-search,
 html.darkmode #article-list .article-list-row .item .list-time,
-html.darkmode #favoriteDropdownMenu:empty:after {
+html.darkmode #favoriteDropdownMenu:empty:after,
+html.darkmode #latestDropdownMenu:empty:after {
 	color: #fff;
 }
 
 html.darkmode #main .menu-wrapper a:hover,
 html.darkmode #main .menu-wrapper #fav-shortcut-area a:hover,
 html.darkmode #article-content-wrapper .header,
-html.darkmode #article-content-wrapper .footer {
+html.darkmode #article-content-wrapper .footer,
+html.darkmode #article-list #article-list-category.can-float a.active,
+html.darkmode #article-list #article-list-category.can-float a:hover,
+html.darkmode #article-reply-area #reply-real-area .reply .reply-header,
+html.darkmode #article-reply-area #reply-best-area .reply .reply-header {
 	background: initial;
 }
 
+html.darkmode #article-reply-area #reply-real-area .reply,
+html.darkmode #article-reply-area #reply-best-area .reply,
 html.darkmode #article-list .article-list-row:hover {
-  background: #495057 !important;
-  box-shadow: 0 .5rem 1rem rgba(33,37,41,1);
+  background: #334155 !important;
+  box-shadow: 0 .5rem 1rem #111827;
+}
+
+html.darkmode #main .menu-wrapper a::after,
+html.darkmode #main .menu-wrapper #fav-shortcut-area a::after {
+  background: #881337;
+}
+
+html.darkmode #article-list .article-list-row.active,
+html.darkmode #comment-write-form-area .fr-toolbar,
+html.darkmode .fr-toolbar,
+html.darkmode .fr-box.fr-basic .fr-wrapper {
+  background: #111827;
 }
 
 html.darkmode #article-list .article-list-row,
@@ -1376,8 +1473,15 @@ html.darkmode #article-list .article-list-row .item .list-title,
 html.darkmode #article-list .article-list-row .item .list-blocked,
 html.darkmode #article-list .article-list-row .item .list-time,
 html.darkmode #article-list .article-list-row .item .list-title .list-category,
-html.darkmode #article-list .article-list-row .item .list-title .list-writer {
-	border-color: #495057;
+html.darkmode #article-list .article-list-row .item .list-title .list-writer,
+html.darkmode #comment-write-form-area .fr-toolbar,
+html.darkmode .fr-box.fr-basic .fr-wrapper {
+	border-color: #334155;
+}
+
+html.darkmode .fr-toolbar,
+html.darkmode #comment-write-form-area .fr-toolbar {
+  border-top-color: #881337;
 }
 
 html.darkmode #article-content p,
@@ -1385,20 +1489,84 @@ html.darkmode #article-content span {
   background: initial !important;
 }
 
-html.darkmode header #right-search-form input[type="text"] {
-  border: .0625rem solid #495057;
+html.darkmode #articleWriteForm .form-control,
+html.darkmode #commentWriteInfoForm .form-control,
+html.darkmode #title_color .input-group-addon,
+html.darkmode header #right-search-form input[type="text"],
+html.darkmode .modal-content,
+html.darkmode .modal-footer,
+html.darkmode .table-bordered,
+html.darkmode .table-bordered thead tr td,
+html.darkmode .table-bordered thead tr th,
+html.darkmode .table-bordered tbody tr td,
+html.darkmode .table-bordered tbody tr th,
+html.darkmode .table-bordered tfoot tr td,
+html.darkmode .table-bordered tfoot tr th,
+html.darkmode .alertify .alert *,
+html.darkmode .alertify .dialog * {
+  border: .0625rem solid #374151;
+  background: #111827;
 }
 
-html.darkmode header #right-search-form input[type="text"]:focus {
-  box-shadow: 0 0 0 .4rem rgba(165,216,255,.5);
+html.darkmode .modal-header {
+  border-bottom: .0625rem solid #374151;
+}
+
+html.darkmode .modal-footer {
+  border-width: .0625rem 0 0 0;
+}
+
+html.darkmode header #right-search-form input[type="text"]:focus,
+html.darkmode #articleWriteForm .form-control:focus,
+html.darkmode #commentWriteInfoForm .form-control:focus {
+  box-shadow: 0 0 0 .4rem rgba(100,116,139,.5);
 }
 
 html.darkmode #boardSearchForm input:focus {
-  box-shadow: 0 0 0 .3rem rgba(165,216,255,.5);
+  box-shadow: 0 0 0 .3rem rgba(100,116,139,.5);
 }
 
-html.darkmode .btn.cog:hover {
-  background: #495057;
+html.darkmode #article-list #boardSearchForm .form-control,
+html.darkmode .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper {
+  border: .0625rem solid #374151;
+  background: #111827;
+}
+
+html.darkmode #boardSearchForm .input-group-btn .btn, {
+  border: .0625rem solid #374151;
+}
+
+html.darkmode .btn-default,
+html.darkmode .modal-footer .btn-default,
+html.darkmode #image-upload-btn,
+html.darkmode #addEmoteBtn,
+html.darkmode #article-content-wrapper .footer .btn-default,
+html.darkmode #articleWriteForm a.btn,
+html.darkmode #boardSearchForm .input-group-btn .btn,
+html.darkmode div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default,
+html.darkmode .dropdown-menu .divider {
+  background-color: #334155;
+}
+
+html.darkmode .btn.cog:hover,
+html.darkmode .btn-default:hover,
+html.darkmode .modal-footer .btn-default:hover,
+html.darkmode #image-upload-btn:hover,
+html.darkmode #addEmoteBtn:hover,
+html.darkmode #article-content-wrapper .footer .btn-default:hover,
+html.darkmode #articleWriteForm a.btn:hover,
+html.darkmode #boardSearchForm .input-group-btn .btn:hover,
+html.darkmode div[style="position: absolute; width: 95%; margin-top: 120px;"] .btn-default:hover,
+html.darkmode .fr-desktop .fr-command:hover,
+html.darkmode .fr-desktop .fr-command:focus,
+html.darkmode .fr-desktop .fr-command.fr-btn-hover,
+html.darkmode .fr-desktop .fr-command.fr-expanded,
+html.darkmode .fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active,
+html.darkmode .fr-popup .fr-command.fr-btn.fr-dropdown.fr-active,
+html.darkmode .fr-separator,
+html.darkmode .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a.fr-active {
+  color: #fff;
+  background-color: #475569;
 }
 
 html.darkmode .favo {
