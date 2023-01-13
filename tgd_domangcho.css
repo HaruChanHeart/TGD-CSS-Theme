@@ -1079,7 +1079,7 @@ li:nth-child(9n) .label-default {
 header #right-search-form #right-search-btn {
   color: #fff;
   background: linear-gradient(90deg, #44403c, #a8a29e);
-  box-shadow: 0 .5rem 1rem rgba(255,168,168,.75);
+  box-shadow: 0 .5rem 1rem rgba(151,131,117,.25);
   border-radius: 10rem;
   margin-left: 1rem;
   padding: 1rem;
