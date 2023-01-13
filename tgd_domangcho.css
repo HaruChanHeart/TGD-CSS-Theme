@@ -1058,7 +1058,7 @@ li:nth-child(9n) .label-default {
 #articleWriteForm .form-control:focus,
 #commentWriteInfoForm .form-control:focus {
   border-color: #44403c;
-  box-shadow: 0 0 0 .4rem rgba(255,168,168,.5);
+  box-shadow: 0 0 0 .4rem rgba(151,131,117,.25);
 }
 
 #title_color .form-control {
@@ -1105,7 +1105,7 @@ header #right-search-form input[type="text"]::placeholder {
 
 header #right-search-form input[type="text"]:focus {
   border-color: #44403c;
-  box-shadow: 0 0 0 .4rem rgba(255,168,168,.5);
+  box-shadow: 0 0 0 .4rem rgba(151,131,117,.25);
   outline: 0;
 }
 
@@ -1134,7 +1134,7 @@ header #right-search-form input[type="text"]:focus {
 
 #boardSearchForm input:focus {
   border-color: #44403c;
-  box-shadow: 0 0 0 .3rem rgba(255,168,168,.5);
+  box-shadow: 0 0 0 .3rem rgba(151,131,117,.25);
 }
 
 /* Pagination */
