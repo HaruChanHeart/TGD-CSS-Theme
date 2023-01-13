@@ -74,7 +74,7 @@ a {
 
 a:focus,
 a:hover {
-	color: #ffa8a8;
+  color: #a3a3a3;
   text-decoration: none;
 }
 
@@ -498,12 +498,15 @@ html.darkmode #main .menu-wrapper .spacer {
 }
 
 #article-list .article-list-row .item .list-header span {
-  background: #ff6b6b;
+  background: #78716c;
 }
 
-#article-list .article-list-row .item .list-title .list-writer.logged span,
+#article-list .article-list-row .item .list-title .list-writer.logged span {
+  color: #78716c;
+}
+
 html.darkmode #article-list .article-list-row .item .list-title .list-writer.logged span {
-  color: #ff6b6b;
+  color: #a8a29e;
 }
 
 #article-list .article-list-row .item .list-title small.comment-count {
@@ -598,14 +601,14 @@ span.a-badge i.fa.fa-info-circle {
 #article-reply-area #reply-best-area .reply {
   border: 0;
   border-radius: .5rem;
-  box-shadow: 0 .5rem 1rem rgb(255,227,227,.75);
+  box-shadow: 0 .5rem 1rem rgba(151,131,117,.25);
   padding: 1rem;
   transition: box-shadow .15s ease-in-out, transform .15s ease-in-out;
 }
 
 #article-reply-area #reply-real-area .reply:hover,
 #article-reply-area #reply-best-area .reply:hover {
-  box-shadow: 0 .75rem 2rem rgb(255,227,227,.75);
+  box-shadow: 0 .75rem 2rem rgba(151,131,117,.25);
   transform: translateY(-.2rem);
 }
 
@@ -619,7 +622,7 @@ span.a-badge i.fa.fa-info-circle {
 #article-reply-area #reply-best-area .reply .reply-header .reply-writer.logged,
 html.darkmode #article-reply-area #reply-real-area .reply .reply-header .reply-writer.logged,
 html.darkmode #article-reply-area #reply-best-area .reply .reply-header .reply-writer.logged {
-  color: #ff6b6b;
+  color: #78716c;
 }
 
 #article-reply-area > .header h5 {
@@ -1306,7 +1309,7 @@ html.darkmode #article-list #article-list-menu .btn.write:hover {
 html.darkmode #article-list .article-list-row .item .list-title small.comment-count,
 html.darkmode #article-reply-area #reply-real-area .reply .reply-header .reply-menu a,
 html.darkmode #article-reply-area #reply-best-area .reply .reply-header .reply-menu a {
-  color: #f43f5e;
+  color: #a8a29e;
 }
 
 html.darkmode #article-reply-area .header h5,
