@@ -1,6 +1,6 @@
 /*
 * 냉정과 열정 사이 스킨
-* (C)2021-2022 냉혈적인 하루 제작
+* (C)2021-2023 냉혈적인 하루 제작
 * 무단 사용 및 2차 수정 금지이에요!
 */
 
@@ -765,15 +765,15 @@ i.fa.fa-lock {
 }
 
 .btn:hover {
-	filter: brightness(1.15);
+  filter: brightness(1.15);
 }
 
 .btn:active {
-	color: #343a40;
+  color: #343a40;
 }
 
 .btn:focus {
-	color: #f1f3f5;
+  color: #f1f3f5;
 }
 
 .btn,
@@ -782,15 +782,15 @@ i.fa.fa-lock {
   border-radius: 10rem;
 }
 
-.btn.cog, {
+.btn.cog {
   filter: initial;
-	background: #fff;
+  background: #fff;
   transition: background .15s ease;
 }
 
 .btn.cog:hover {
   filter: initial;
-	background: #f1f3f5;
+  background: #f1f3f5;
 }
 
 .btn-primary,
@@ -1532,7 +1532,7 @@ html.darkmode .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper {
   background: #111827;
 }
 
-html.darkmode #boardSearchForm .input-group-btn .btn, {
+html.darkmode #boardSearchForm .input-group-btn .btn {
   border: .0625rem solid #374151;
 }
 
